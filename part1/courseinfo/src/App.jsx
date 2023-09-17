@@ -1,3 +1,7 @@
+const Header = (props) => <h1>{props.title}</h1>
+const Content = (props) => <p>{props.name} {props.exercises}</p>
+const Total = (props) => <p>Number of exercises {props.count}</p>
+
 const App = () => {
   const course = 'Half Stack application development'
   const part1 = 'Fundamentals of React'
@@ -9,17 +13,11 @@ const App = () => {
 
   return (
     <div>
-      <h1>{course}</h1>
-      <p>
-        {part1} {exercises1}
-      </p>
-      <p>
-        {part2} {exercises2}
-      </p>
-      <p>
-        {part3} {exercises3}
-      </p>
-      <p>Number of exercises {exercises1 + exercises2 + exercises3}</p>
+      <Header title={course} />
+      <Content name={part1} exercises={exercises1} />
+      <Content name={part2} exercises={exercises2} />
+      <Content name={part3} exercises={exercises3} />
+      <Total count={exercises1 + exercises2 + exercises3} />
     </div>
   )
 }
