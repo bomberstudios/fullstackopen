@@ -30,5 +30,3 @@ To be clear: the StatisticLine component always displays a single statistic, mea
 ## Exercise 1.11: Unicafe step6 ✅
 
 Display the statistics in an HTML table.
-
-## Exercise 1.12: anecdotes step1
