@@ -2,10 +2,13 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
   const [good, setGood] = useState(0);
   const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
+
+  const totalVotes = good + neutral + bad;
+  const averageScore = ((good - bad) / totalVotes).toFixed(2);
+  const positiveFeedback = ((good / totalVotes) * 100).toFixed(2);
 
   return (
     <>
@@ -24,6 +27,11 @@ function App() {
         <div>Good: {good}</div>
         <div>Neutral: {neutral}</div>
         <div>Bad: {bad}</div>
+        <div>Total votes: {totalVotes}</div>
+        <div>Average score: {averageScore > 0 ? averageScore : 0}</div>
+        <div>
+          Positive feedback: {positiveFeedback > 0 ? positiveFeedback : 0}%
+        </div>
       </div>
     </>
   );
