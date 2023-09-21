@@ -9,17 +9,23 @@ const Statistics = ({ good, neutral, bad }) => {
   const totalVotes = good + neutral + bad;
   const averageScore = ((good - bad) / totalVotes).toFixed(2);
   const positiveFeedback = ((good / totalVotes) * 100).toFixed(2);
+
   return (
     <Card>
       <h2>Statistics</h2>
-      <div>Good: {good}</div>
-      <div>Neutral: {neutral}</div>
-      <div>Bad: {bad}</div>
-      <div>Total votes: {totalVotes}</div>
-      <div>Average score: {averageScore > 0 ? averageScore : 0}</div>
-      <div>
-        Positive feedback: {positiveFeedback > 0 ? positiveFeedback : 0}%
-      </div>
+      {totalVotes === 0 && <p>No feedback given</p>}
+      {totalVotes > 0 && (
+        <>
+          <div>Good: {good}</div>
+          <div>Neutral: {neutral}</div>
+          <div>Bad: {bad}</div>
+          <div>Total votes: {totalVotes}</div>
+          <div>Average score: {averageScore > 0 ? averageScore : 0}</div>
+          <div>
+            Positive feedback: {positiveFeedback > 0 ? positiveFeedback : 0}%
+          </div>
+        </>
+      )}
     </Card>
   );
 };

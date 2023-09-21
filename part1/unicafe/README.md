@@ -13,3 +13,7 @@ Expand your app so that it shows more statistics about the gathered feedback: th
 ## Exercise 1.8: Unicafe step3 ✅
 
 Refactor your app so that displaying the statistics is extracted into its own Statistics component. The state of the app should remain in the App root component.
+
+## Exercise 1.9: unicafe step4 ✅
+
+Change your application to display statistics only once feedback has been gathered.
