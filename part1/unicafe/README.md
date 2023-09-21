@@ -26,3 +26,9 @@ Let's continue refactoring the application. Extract the following two components
 - [x] StatisticLine for displaying a single statistic, e.g. the average score.
 
 To be clear: the StatisticLine component always displays a single statistic, meaning that the application uses multiple components for rendering all of the statistics.
+
+## Exercise 1.11: Unicafe step6 ✅
+
+Display the statistics in an HTML table.
+
+## Exercise 1.12: anecdotes step1

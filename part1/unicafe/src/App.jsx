@@ -11,9 +11,10 @@ const Button = ({ onClick, text }) => {
 
 const StatisticsLine = ({ text, value }) => {
   return (
-    <div>
-      {text}: {value}
-    </div>
+    <tr>
+      <td style={{ width: "50%", textAlign: "right" }}>{text}:</td>
+      <td style={{ width: "50%", textAlign: "left" }}>{value}</td>
+    </tr>
   );
 };
 const Statistics = ({ good, neutral, bad }) => {
@@ -26,17 +27,19 @@ const Statistics = ({ good, neutral, bad }) => {
       <h2>Statistics</h2>
       {totalVotes === 0 && <p>No feedback given</p>}
       {totalVotes > 0 && (
-        <>
-          <StatisticsLine text="Good" value={good} />
-          <StatisticsLine text="Neutral" value={neutral} />
-          <StatisticsLine text="Bad" value={bad} />
-          <StatisticsLine text="Total votes" value={totalVotes} />
-          <StatisticsLine text="Average score" value={averageScore} />
-          <StatisticsLine
-            text="Positive feedback"
-            value={positiveFeedback + "%"}
-          />
-        </>
+        <table>
+          <tbody>
+            <StatisticsLine text="Good" value={good} />
+            <StatisticsLine text="Neutral" value={neutral} />
+            <StatisticsLine text="Bad" value={bad} />
+            <StatisticsLine text="Total votes" value={totalVotes} />
+            <StatisticsLine text="Average score" value={averageScore} />
+            <StatisticsLine
+              text="Positive feedback"
+              value={positiveFeedback + "%"}
+            />
+          </tbody>
+        </table>
       )}
     </Card>
   );
