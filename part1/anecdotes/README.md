@@ -9,3 +9,7 @@ Expand the application by adding a button that can be clicked to display a rando
 Expand your application so that you can vote for the displayed anecdote.
 
 NB store the votes of each anecdote into an array or object in the component's state. Remember that the correct way of updating state stored in complex data structures like objects and arrays is to make a copy of the state.
+
+## Exercise 1.14: anecdotes step3 ✅
+
+Now implement the final version of the application that displays the anecdote with the largest number of votes.
