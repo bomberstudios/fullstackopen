@@ -17,3 +17,12 @@ Refactor your app so that displaying the statistics is extracted into its own St
 ## Exercise 1.9: unicafe step4 ✅
 
 Change your application to display statistics only once feedback has been gathered.
+
+## Exercise 1.10: Unicafe step5 ✅
+
+Let's continue refactoring the application. Extract the following two components:
+
+- [x] Button for defining the buttons used for submitting feedback
+- [x] StatisticLine for displaying a single statistic, e.g. the average score.
+
+To be clear: the StatisticLine component always displays a single statistic, meaning that the application uses multiple components for rendering all of the statistics.
