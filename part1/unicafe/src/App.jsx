@@ -1,13 +1,13 @@
-import { useState } from "react";
-import "./App.css";
+import { useState } from "react"
+import "./App.css"
 
 const Card = ({ children }) => {
-  return <div className="card">{children}</div>;
-};
+  return <div className="card">{children}</div>
+}
 
 const Button = ({ onClick, text }) => {
-  return <button onClick={onClick}>{text}</button>;
-};
+  return <button onClick={onClick}>{text}</button>
+}
 
 const StatisticsLine = ({ text, value }) => {
   return (
@@ -15,12 +15,12 @@ const StatisticsLine = ({ text, value }) => {
       <td style={{ width: "50%", textAlign: "right" }}>{text}:</td>
       <td style={{ width: "50%", textAlign: "left" }}>{value}</td>
     </tr>
-  );
-};
+  )
+}
 const Statistics = ({ good, neutral, bad }) => {
-  const totalVotes = good + neutral + bad;
-  const averageScore = ((good - bad) / totalVotes).toFixed(2);
-  const positiveFeedback = ((good / totalVotes) * 100).toFixed(2);
+  const totalVotes = good + neutral + bad
+  const averageScore = ((good - bad) / totalVotes).toFixed(2)
+  const positiveFeedback = ((good / totalVotes) * 100).toFixed(2)
 
   return (
     <Card>
@@ -42,19 +42,19 @@ const Statistics = ({ good, neutral, bad }) => {
         </table>
       )}
     </Card>
-  );
-};
+  )
+}
 
 function App() {
-  const [good, setGood] = useState(0);
-  const [neutral, setNeutral] = useState(0);
-  const [bad, setBad] = useState(0);
+  const [good, setGood] = useState(0)
+  const [neutral, setNeutral] = useState(0)
+  const [bad, setBad] = useState(0)
 
-  const handleGoodClick = () => setGood(good + 1);
+  const handleGoodClick = () => setGood(good + 1)
 
-  const handleNeutralClick = () => setNeutral(neutral + 1);
+  const handleNeutralClick = () => setNeutral(neutral + 1)
 
-  const handleBadClick = () => setBad(bad + 1);
+  const handleBadClick = () => setBad(bad + 1)
 
   return (
     <>
@@ -68,7 +68,7 @@ function App() {
       </Card>
       <Statistics good={good} neutral={neutral} bad={bad} />
     </>
-  );
+  )
 }
 
-export default App;
+export default App
