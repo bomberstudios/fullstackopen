@@ -5,9 +5,13 @@ const App = () => {
   const [persons, setPersons] = useState([{ name: "Arto Hellas" }])
   const [newName, setNewName] = useState("")
 
-  const handleSubmit = (name, event) => {
+  const handleSubmit = (newName, event) => {
     event.preventDefault()
-    setPersons([...persons, { name: name }])
+    if (persons.find((p) => p.name === newName)) {
+      alert(`${newName} is already added to phonebook`)
+      return
+    }
+    setPersons([...persons, { name: newName }])
     setNewName("")
   }
   return (
